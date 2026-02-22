@@ -9,54 +9,116 @@ body {
   max-width: 1240px;
   margin: 0 auto;
 }
-main{
-    padding: 0 10px;
+main {
+  padding: 0 10px;
 }
 .btn {
+  width: 100%;
+
+  border-radius: 4px;
   border: none;
-  padding: 10px 25px;
-  background: rgb(49, 92, 221);
-  color: #eff2f7;
-
-  border-radius: 8px;
+  background: blue;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 18px;
 }
-.status-info{
-    background: white;
-    width: 100px;
-    padding: 10px;
-
-    border-radius: 3px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.btn-interview {
+  border-radius: 4px;
+  border: 2px solid #10b981;
+  /* background: #eff2f7; */
+  color: #10b981;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 18px;
 }
-.status-info h4{
-    font-size: 1rem;
-    font-weight: bold;
-    opacity: 0.7;
+.btn-rejected {
+  border-radius: 4px;
+  border: 2px solid #ef4444;
+  /* background: #eff2f7; */
+  color: #ef4444;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 18px;
 }
-.status-info p{
-    font-weight: bold;
-    font-size: 25px;
-
+.btn-not-applied {
+  border-radius: 4px;
+  border: none;
+  background: #eef4ff;
+  color: #002c5c;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
+.status-info {
+  background: white;
+  width: 100px;
+  padding: 10px;
+
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.status-info h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0.7;
+}
+.status-info p {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card p {
+  opacity: 0.8;
+}
+/* box shadow  */
+.job-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+/* hover  */
+.btn-interview:hover {
+  background-color: #16a34a;
+  color: #fff;
+}
+
+.btn-rejected:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
 
 @media (min-width: 768px) {
- .status-info{
+  .status-info {
     width: 200px;
     align-items: start;
     padding: 20px;
-
+  }
+  .btn {
+    width: 100px;
+    padding: 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  .status-info{
+  .status-info {
     width: 360px;
     align-items: start;
     padding: 20px;
-
+  }
+  .btn {
+    width: 120px;
+    padding: 10px;
   }
 }
