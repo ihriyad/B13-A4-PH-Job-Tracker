@@ -45,7 +45,7 @@ buttons.forEach(function (button) {
 
 function setStatus(type, clickedBtn) {
   let card = clickedBtn.closest(".job-card");
-  console.log(card);
+  // console.log(card);
   let badge = card.querySelector(".btn-not-applied");
 
   if (type === "interview") {
@@ -62,7 +62,7 @@ function setStatus(type, clickedBtn) {
   }
 }
 const interviewBtn = document.querySelectorAll(".btn-interview");
-console.log(interviewBtn);
+// console.log(interviewBtn);
 interviewBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
     console.log(btn);
@@ -70,11 +70,11 @@ interviewBtn.forEach((btn) => {
   });
 });
 const rejectedBtn = document.querySelectorAll(".btn-rejected");
-console.log(rejectedBtn);
+// console.log(rejectedBtn);
 rejectedBtn.forEach((btn) => {
-  console.log(btn);
+  // console.log(btn);
   btn.addEventListener("click", function () {
-    console.log("i am clicked");
+    // console.log("i am clicked");
     setStatus("rejected", btn);
   });
 });
