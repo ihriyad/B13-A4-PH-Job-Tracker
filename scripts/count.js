@@ -27,3 +27,8 @@ deleteButtons.forEach((btn) => {
     updateCount();
   });
 });
+
+let interviewCount = 0;
+let rejectCount = 0;
+
+
