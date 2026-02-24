@@ -1,13 +1,13 @@
+// filer btn cards here 
+
 const cards = document.querySelectorAll(".job-card");
-// console.log(cards);
 let intBtn = document.querySelectorAll(".btn-interview");
-// console.log(intBtn);
 let rejBtn = document.querySelectorAll(".btn-rejected");
 let empty = document.getElementById("no-job");
 let currentTab = "all";
 
 for (let i = 0; i < intBtn.length; i++) {
-  //   console.log(intBtn[i]);
+
   intBtn[i].addEventListener("click", function () {
     cards[i].classList.add("interview");
     cards[i].classList.remove("rejected");
@@ -15,7 +15,7 @@ for (let i = 0; i < intBtn.length; i++) {
   });
 }
 for (let i = 0; i < rejBtn.length; i++) {
-  console.log(intBtn[i]);
+
   rejBtn[i].addEventListener("click", function () {
     cards[i].classList.add("rejected");
     cards[i].classList.remove("interview");
@@ -24,6 +24,7 @@ for (let i = 0; i < rejBtn.length; i++) {
   });
 }
 
+//filer function
 function filerCards(type) {
   let cards = document.querySelectorAll(".job-card");
   let found = false;
@@ -45,20 +46,18 @@ function filerCards(type) {
   }
 }
 
+//call function
 document.getElementById("allBtn").addEventListener("click", function () {
   currentTab = "all";
-
   filerCards("all");
 });
 
 document.getElementById("interviewBtn").addEventListener("click", function () {
   currentTab = "interview";
-
   filerCards("interview");
 });
 
 document.getElementById("rejectedBtn").addEventListener("click", function () {
   currentTab = "rejected";
-
   filerCards("rejected");
 });

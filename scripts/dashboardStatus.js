@@ -1,3 +1,4 @@
+//get total count
 const dashBoardTotal = document.getElementById("dashboard-total");
 const availableJobTotal = document.getElementById("available-job-total");
 
@@ -10,12 +11,18 @@ function totalCount() {
 
   dashBoardTotal.innerText = allCards.length;
   availableJobTotal.innerText = allCards.length;
-
+  //this hide no-job section
   if (allCards.length === 0) {
     noJob.classList.remove("hidden");
   } else {
     noJob.classList.add("hidden");
   }
+}
+
+// update dashboard
+function updateDashB() {
+  document.getElementById("interview-count").innerText = interviewCount;
+  document.getElementById("rejected-count").innerText = rejectCount;
 }
 
 document.querySelectorAll(".job-card").forEach(initCard);

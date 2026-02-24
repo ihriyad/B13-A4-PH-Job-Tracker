@@ -1,30 +1,50 @@
-// // count total cards
-// const dashBoardTotal = document.getElementById("dashboard-total");
-// const availableJobTotal = document.getElementById("available-job-total");
-// // console.log(availableJobTotal)
-// // console.log(dashBoardTotal)
-// function updateCount() {
-//   const allCards = document.querySelectorAll(".job-card");
-//   const noJob = document.getElementById("no-job");
-//   // console.log(allCards);
-//   dashBoardTotal.innerText = allCards.length;
-//   availableJobTotal.innerText = allCards.length;
-//   //show no-job card
-//   if (allCards.length === 0) {
-//     noJob.classList.remove("hidden");
-//   } else {
-//     noJob.classList.add("hidden");
-//   }
-// }
-// updateCount();
-// const deleteButtons = document.querySelectorAll(".delete-btn");
-// deleteButtons.forEach((btn) => {
-//   //   console.log(btn);
-//   btn.addEventListener("click", function () {
-//     const card = btn.closest(".job-card");
-//     // console.log(card)
-//     card.remove();
+//count interview or reject
+function initCard(card) {
+  let cardState = "";
 
-//     updateCount();
-//   });
-// });
+  const interviewBtn = card.querySelector(".btn-interview");
+  const rejectedBtn = card.querySelector(".btn-rejected");
+  const deleteBtn = card.querySelector(".delete-btn");
+
+  interviewBtn.addEventListener("click", function () {
+    if (cardState === "interview") {
+      return;
+    }
+
+    if (cardState === "rejected") {
+      rejectCount--;
+    }
+
+    cardState = "interview";
+    interviewCount++;
+    updateDashB();
+  });
+
+  rejectedBtn.addEventListener("click", function () {
+    if (cardState === "rejected") {
+      return;
+    }
+
+    if (cardState === "interview") {
+      interviewCount--;
+    }
+
+    cardState = "rejected";
+    rejectCount++;
+    updateDashB();
+  });
+  //delete btn set up
+  deleteBtn.addEventListener("click", function () {
+    if (cardState === "interview") {
+      interviewCount--;
+    }
+    if (cardState === "rejected") {
+      rejectCount--;
+    }
+
+    card.remove();
+    filerCards(currentTab);
+    totalCount();
+    updateDashB();
+  });
+}
