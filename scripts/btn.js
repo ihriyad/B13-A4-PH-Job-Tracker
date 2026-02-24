@@ -65,7 +65,7 @@ const interviewBtn = document.querySelectorAll(".btn-interview");
 // console.log(interviewBtn);
 interviewBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
-    console.log(btn);
+    // console.log(btn);
     setStatus("interview", btn);
   });
 });

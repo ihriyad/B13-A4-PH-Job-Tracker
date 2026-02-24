@@ -12,11 +12,11 @@ function initCard(card) {
 
   interviewBtn.addEventListener("click", function () {
     if (cardState === "interview") {
-        return;
+      return;
     }
 
-    if (cardState === "rejected"){
-         rejectCount--;
+    if (cardState === "rejected") {
+      rejectCount--;
     }
 
     cardState = "interview";
@@ -25,12 +25,12 @@ function initCard(card) {
   });
 
   rejectedBtn.addEventListener("click", function () {
-    if (cardState === "rejected"){
-         return;
+    if (cardState === "rejected") {
+      return;
     }
 
-    if (cardState === "interview"){
-         interviewCount--;
+    if (cardState === "interview") {
+      interviewCount--;
     }
 
     cardState = "rejected";
@@ -39,14 +39,15 @@ function initCard(card) {
   });
 
   deleteBtn.addEventListener("click", function () {
-    if (cardState === "interview"){
-         interviewCount--;
+    if (cardState === "interview") {
+      interviewCount--;
     }
-    if (cardState === "rejected"){
-         rejectCount--;
+    if (cardState === "rejected") {
+      rejectCount--;
     }
 
     card.remove();
+    filerCards(currentTab)
     totalCount();
     updateDashB();
   });
