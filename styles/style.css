@@ -121,6 +121,14 @@ main {
   font-size: 13px;
   cursor: pointer;
 }
+.btn-interview:hover{
+  background: green;
+  color: white;
+}
+.btn-rejected:hover{
+  background: red;
+  color: white;
+}
 
 /*delete btn*/
 .delete-btn {
