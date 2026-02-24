@@ -38,3 +38,17 @@ Event delegation is when I add one event listener to a parent instead of many ch
 I use it for Better performance, Works for dynamically added elements and Cleaner code.
 Example :
 add click listener to ul instead of every li.
+
+5. Difference between preventDefault() and stopPropagation():
+preventDefault():
+Stops the browser’s default action.
+Example: 
+stop form from submitting or link from opening.
+
+stopPropagation():
+Stops the event from moving up (bubbling).
+Parent elements won’t receive the event.
+
+note:
+preventDefault = stop browser behavior
+stopPropagation = stop event flow
