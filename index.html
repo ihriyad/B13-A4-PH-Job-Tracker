@@ -22,28 +22,28 @@
       <section
         class="dashboard pt-5 border-b border-gray-400 pb-5 space-y-4 sticky top-0 z-10 bg-slate-100"
       >
-        <h2 class="text-3xl text-center md:text-start font-bold">
+        <h2 class="text-center md:text-start font-bold">
           Job Application Tracker
         </h2>
-        <div class="status flex justify-between">
+        <div class="status grid grid-cols-3 place-items-center">
           <div class="status-info space-y-1">
             <h4>Total</h4>
             <p id="dashboard-total">0</p>
           </div>
           <div class="status-info space-y-1">
             <h4>Interview</h4>
-            <p id="interview-count" class="text-green-600">0</p>
+            <p id="interview-count" class="text-[#10b981]">0</p>
           </div>
           <div class="status-info space-y-1">
             <h4>Rejected</h4>
-            <p id="rejected-count" class="text-red-600">0</p>
+            <p id="rejected-count" class="text-[#ef4444]">0</p>
           </div>
         </div>
       </section>
       <!-- available-job-->
-      <section id="" class="p-3 mt-6 space-y-3">
+      <section class="available-job p-3 mt-3 space-y-3">
         <div class="job-heading flex justify-between items-center">
-          <h3 class="text-2xl font-bold">Available Jobs</h3>
+          <h3 class="md:text-2xl">Available Jobs</h3>
           <p class="font-bold"><span id="available-job-total">0</span> Jobs</p>
         </div>
         <div class="job-info-btn flex gap-3 items-center">
@@ -53,7 +53,7 @@
         </div>
       </section>
       <!-- no job  -->
-      <section id="no-job" class="mt-8 p-5 bg-white rounded-md hidden">
+      <section id="no-job" class="mt-3 p-3 bg-white rounded-md hidden">
         <div
           class="flex justify-center items-center flex-col gap-4 p-12 md:p-16"
         >
@@ -62,24 +62,25 @@
           <p class="text-center">Check back soon for new job opportunities</p>
         </div>
       </section>
+     <section class="card-container">
       <!-- cards /1 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
-              <h3 class="text-[20px] font-bold">Mobile First Corp</h3>
-              <p>React Native Developer</p>
+              <h3 class="">Mobile First Corp</h3>
+              <p class="role">React Native Developer</p>
             </div>
             <div class="right">
-              <p class="delete-btn bg-slate-100 rounded-full p-3">
+              <p class="delete-btn ">
                 <i class="fa-regular fa-trash-can"></i>
               </p>
             </div>
           </div>
-          <p>Remote | Full-time</p>
+          <p class="location">Remote | Full-time</p>
           <p class="salary text-blue-700">$130,000 - $175,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
           </p>
@@ -91,11 +92,11 @@
       </section>
       <!-- cards /2 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">WebFlow Agency</h3>
-              <p>Web Designer & Developer</p>
+              <p class="role">Web Designer & Developer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -103,10 +104,10 @@
               </p>
             </div>
           </div>
-          <p>Los Angeles, CA • Part-time</p>
+          <p class="location">Los Angeles, CA | Part-time</p>
           <p class="salary text-blue-700">$80,000 - $120,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Create stunning web experiences for high-profile clients. Must have
             portfolio and experience with modern web design trends.
           </p>
@@ -118,11 +119,11 @@
       </section>
       <!-- cards /3 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">DataViz Solutions</h3>
-              <p>Data Visualization Specialist</p>
+              <p class="role">Data Visualization Specialist</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -130,12 +131,12 @@
               </p>
             </div>
           </div>
-          <p>Boston, MA • Full-time</p>
+          <p class="location">Boston, MA | Full-time</p>
           <p class="salary text-blue-700">$125,000 - $165,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
-            Top level Data Visualization Specialist. Im working in this carrier
-            for 10 years. Your company really needs a technician like me.
+          <p class="desc">
+            Top level Data Visualization Specialist. We are looking for Specialist
+            in our company. Our company really needs a technician like you...
           </p>
           <div class="job-btn space-x-3">
             <button class="btn-interview">INTERVIEW</button>
@@ -145,11 +146,11 @@
       </section>
       <!-- cards /4 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">CloudFirst Inc</h3>
-              <p>Backend Developer</p>
+              <p class="role">Backend Developer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -157,10 +158,10 @@
               </p>
             </div>
           </div>
-          <p>Seattle, WA • Full-time</p>
+          <p class="location">Seattle, WA | Full-time</p>
           <p class="salary text-blue-700">$140,000 - $190,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Design and maintain scalable backend systems using Python and AWS.
             Work with modern DevOps practices and cloud infrastructure.
           </p>
@@ -172,11 +173,11 @@
       </section>
       <!-- cards /5 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">Innovation Labs</h3>
-              <p>UI/UX Engineer</p>
+              <p class="role">UI/UX Engineer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -184,10 +185,10 @@
               </p>
             </div>
           </div>
-          <p>Austin, TX • Full-time</p>
+          <p class="location">Austin, TX | Full-time</p>
           <p class="salary text-blue-700">$110,000 - $150,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Create beautiful and functional user interfaces for our suite of
             products. Strong design skills and frontend development expertise
             required.
@@ -200,11 +201,11 @@
       </section>
       <!-- cards /6 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">MegaCorp Solutions</h3>
-              <p>JavaScript Developer</p>
+              <p class="role">JavaScript Developer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -212,10 +213,10 @@
               </p>
             </div>
           </div>
-          <p>New York, NY • Full-time</p>
+          <p class="location">New York, USA | Full-time</p>
           <p class="salary text-blue-700">$130,000 - $170,00</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Build enterprise applicant ons with JavaScript and modern
             frameworks. We offer competitive compensation, health insurance, and
             professional development opportunities.
@@ -228,11 +229,11 @@
       </section>
       <!-- cards /7 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">StartupXYZ</h3>
-              <p>Full Stack Engineer</p>
+              <p class="role">Full Stack Engineer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -240,10 +241,10 @@
               </p>
             </div>
           </div>
-          <p>Remote • Full-time</p>
+          <p class="location">Remote | Full-time</p>
           <p class="salary text-blue-700">$120,000 - $160,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             Join our fast-growing startup and work on our core platform.
             Experience with Node.js and React required. Great benefits and
             equity package included.
@@ -256,11 +257,11 @@
       </section>
       <!-- cards /8 -->
       <section class="job-card mt-8 p-5 bg-white rounded-md">
-        <div class="space-y-3">
+        <div class="">
           <div class="card-header flex items-center justify-between">
             <div class="left">
               <h3 class="text-[20px] font-bold">TechCorp Industries</h3>
-              <p>Senior Frontend Developer</p>
+              <p class="role">Senior Frontend Developer</p>
             </div>
             <div class="right">
               <p class="delete-btn bg-slate-100 rounded-full p-3">
@@ -268,10 +269,10 @@
               </p>
             </div>
           </div>
-          <p>San Francisco, CA • Full-time</p>
+          <p class="location">San Francisco, CA | Full-time</p>
           <p class="salary text-blue-700">$130,000 - $175,000</p>
           <button class="btn-not-applied btn-status">NOT APPLIED</button>
-          <p class="font-medium">
+          <p class="desc">
             We are looking for an experienced Frontend Developer to build
             scalable web applications using React and TypeScript. You will work
             with a talented team on cutting-edge projects.
@@ -282,6 +283,7 @@
           </div>
         </div>
       </section>
+     </section>
     </main>
     <script src="scripts/machine.js"></script>
     <script src="scripts/count.js"></script>
